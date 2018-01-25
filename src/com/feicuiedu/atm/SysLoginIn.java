@@ -103,7 +103,7 @@ public class SysLoginIn extends AtmServices implements Serializable,AbstractSys{
 				continue;
 			}
 		}
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyymmddHHmmssSSS");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 		String time = sdf.format(new Date());
 		String account = "37"+ gender +time;
 		System.out.println("注册成功");

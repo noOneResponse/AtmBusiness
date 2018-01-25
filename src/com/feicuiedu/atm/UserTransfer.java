@@ -1,5 +1,7 @@
 package com.feicuiedu.atm;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 public class UserTransfer extends AtmServices implements AbstractUser{
@@ -63,10 +65,13 @@ public class UserTransfer extends AtmServices implements AbstractUser{
 				user.setAmount(user.getAmount()-amount);
 				another.setAmount(another.getAmount()+amount);
 				System.out.println("现在的余额:"+user.getAmount());
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
+				String time = sdf.format(new Date());
+				user.getList().add(time+" "+"转账支出:"+amount+"元");
+				another.getList().add(time+" "+"转账收入:"+amount+"元");
 				break;
 			}
 			else if("2".equals(str)) {
-				
 				action(user,map);
 			}
 			else if("3".equals(str)) {

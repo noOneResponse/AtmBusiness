@@ -12,7 +12,7 @@ public class UserMenu extends AtmServices implements AbstractUser{
 		
 		while(true) {
 			try {
-				System.out.println("1.查询，2.转账，3.取款，4.存款，5.退出");
+				System.out.println("1.查询，2.转账，3.取款，4.存款，5.流水记录，6.退出");
 				String str = scr.next();
 				Properties prop = new Properties();
 				prop.load(new FileInputStream(new File("InformationTxt"+File.separator+"UserMenu.properties")));

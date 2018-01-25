@@ -1,6 +1,7 @@
 package com.feicuiedu.atm;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class UserBusiness implements Serializable {
 	/**
@@ -16,6 +17,7 @@ public class UserBusiness implements Serializable {
 	private String edu; 
 	private double amount;
 	private String address;
+	private ArrayList<String> list;
 	
 	public UserBusiness(String user,String password,String name,String idnum,
 			String gender,String edu,double amount, String address) {
@@ -27,9 +29,16 @@ public class UserBusiness implements Serializable {
 		this.amount = amount;
 		this.user = user;
 		this.address = address;
+		list = new ArrayList<>();
 	}
 	public UserBusiness() {
 		
+	}
+	public ArrayList<String> getList() {
+		return list;
+	}
+	public void setList(ArrayList<String> list) {
+		this.list = list;
 	}
 	
 	public String getUser() {
@@ -92,6 +101,7 @@ public class UserBusiness implements Serializable {
 		}
 		return false;
 	}
+	
 	
 	
 	
